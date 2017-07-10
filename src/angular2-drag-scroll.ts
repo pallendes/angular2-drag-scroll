@@ -206,7 +206,7 @@ export class DragScroll implements OnDestroy, OnInit, OnChanges, AfterViewChecke
     if (this.el.nativeElement.style.display !== 'none') {
       this.parentNode = this.el.nativeElement.parentNode;
       this.wrapper = document.createElement('div');
-      this.wrapper.style.width = this.el.nativeElement.offsetWidth + 'px';
+      this.wrapper.style.width = '100%';//this.el.nativeElement.offsetWidth + 'px';
       this.wrapper.style.height = this.el.nativeElement.offsetHeight + 'px';
       this.wrapper.style.overflow = 'hidden';
       this.el.nativeElement.style.width = `calc(100% + ${this.scrollbarWidth})`;
